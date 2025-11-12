@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account – My Website</title>
+    <meta name="description"
+        content="Sign up for a new account on My Website. Enter your full name, email, and password to get started.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #heading {
+            color: #2c3e50;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        #signupForm {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 1px solid #dfe6e9;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        .sign_btn {
+            margin-top: 25px;
+        }
+
+        .sign_btn button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .sign_btn button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1 id="heading">Create New Account</h1>
+    </div>
+
+    <div id="message" role="alert"></div>
+
+    <form id="signupForm" aria-label="Signup Form">
+        <div class="form-group">
+            <label for="sUsername">Full Name</label>
+            <input type="text" id="sUsername" name="fullname" placeholder="Enter your full name" required
+                autocomplete="name">
+        </div>
+
+        <div class="form-group">
+            <label for="sEmail">Email Address</label>
+            <input type="email" id="sEmail" name="email" placeholder="Enter your email" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+            <label for="sPassword">Password</label>
+            <input type="password" id="sPassword" name="password" placeholder="Enter a password" required
+                autocomplete="new-password">
+        </div>
+
+        <div class="sign_btn">
+            <button type="submit">Sign Up</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
