@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In – My Website</title>
+    <meta name="description"
+        content="Sign in to access your account on My Website. Secure login with username and password.">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #4a90e2;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+        }
+
+        .check {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .sign_btn button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .sign_btn button:hover {
+            background-color: #3a7bc8;
+        }
+
+        .or {
+            text-align: center;
+            margin: 20px 0;
+            color: #555;
+            /* improved contrast */
+            position: relative;
+        }
+
+        .or::before,
+        .or::after {
+            content: "";
+            display: inline-block;
+            width: 30%;
+            height: 1px;
+            background-color: #ddd;
+            position: absolute;
+            top: 50%;
+        }
+
+        .or::before {
+            left: 0;
+        }
+
+        .or::after {
+            right: 0;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: #4a90e2;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="loginForm" aria-label="Sign In Form">
+        <h1>Sign In to Your Account</h1>
+        <div id="message" role="alert"></div>
+
+        <div class="username">
+            <label for="lUsername" class="visually-hidden">Username or Email Address</label>
+            <input type="text" id="lUsername" name="username" placeholder="Username / Email Address" required
+                autocomplete="username">
+        </div>
+
+        <div class="password">
+            <label for="lPassword" class="visually-hidden">Password</label>
+            <input type="password" id="lPassword" name="password" placeholder="Password" required
+                autocomplete="current-password">
+        </div>
+
+        <div class="check">
+            <input type="checkbox" id="check" name="remember">
+            <label for="check">Remember Me</label>
+        </div>
+
+        <div class="sign_btn">
+            <button type="submit">Sign In</button>
+        </div>
+
+        <div class="or">Or</div>
+
+        <div class="links">
+            <a href="forget.html">Forgot Password</a> /
+            <a href="signup.html">Create New Account</a>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
